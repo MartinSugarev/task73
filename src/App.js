@@ -6,6 +6,7 @@ function App() {
 const [count, SetCount] = useState(1)
 
 useEffect(() => {
+  document.title = count
   console.log('button is clicked')
 }, [count])
 
@@ -25,9 +26,7 @@ const handleClick = () => {
       <div class="container is-fullhd">
         <div class="notification">
           Edit the <code>./src</code> folder to add components.
-          <button onClick={() => {
-            handleClick()
-          }}>Count ({count})</button>
+          <button onClick={handleClick}>Count ({count})</button>
         </div>
       </div>
     </div>
